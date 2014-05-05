@@ -1,0 +1,200 @@
+html {
+	height: 100%;
+	background-color: #00838f;
+}
+
+body {
+	font-family: montserrat, arial, verdana;
+}
+/*form styles*/
+#msform {
+	width: 100%;
+	height:440px;
+	margin: 16px auto 0 auto;
+	
+	position: relative;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0 auto;
+	position: absolute;
+	overflow: auto;
+	height:509px;
+}
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+#msform fieldset iframe{
+	width:100%;
+	height: 392px;
+	border:0;
+	frameborder:0;
+	z-index:100000;
+	position:relative;
+	background-color: #fff;
+}
+/*inputs*/
+#msform input,#msform select{
+	outline: none;
+}
+.input{
+	padding: 14px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width:50%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 14px;
+}
+#cost_method2{
+	width:200px;
+	height: 44px;
+	border-radius: 3px;
+}
+.input2{
+	border: 1px solid #ccc;
+}
+/*buttons*/
+#msform .action-button {
+	width: 88px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 0px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+	text-align: center;
+}
+/*progressbar*/
+#progressbar {
+	margin-bottom: 10px;
+	overflow: hidden;
+	counter-reset: step;
+	text-align: center;
+}
+#progressbar li {
+	list-style-type: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 20%;
+	float: left;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1;
+}
+#progressbar li:first-child:after {
+	content: none; 
+}
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #27AE60;
+	color: white;
+}
+#tip{
+	z-index: 100002;
+	position: absolute;
+}
+#tipPic{
+	background: url(../img/task.png);
+	width: 22px;
+	height: 50px;
+	z-index: 100002;
+	position: relative;
+	left: 200px;
+}
+#tipText{
+	width: 254px;
+	height: 60px;
+	border-radius: 5px;
+	background-color: #fff;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	z-index: 100001;
+	position: relative; 
+	top:-10px;
+	padding-left: 10px;
+	padding-top: 24px;
+	padding-right: 10px;
+}
+.inputFocus{
+	z-index:100000;
+	position: relative;
+	border: #f90 2px solid;
+}
+#tipStep{
+	position: relative;
+	margin-top:-32px;
+	z-index: 100003;
+	margin-left: 30px;
+}
+#previousStep{
+	margin-right: 30px;
+	float: right;
+}
+#nextStep{
+	margin-right: 30px;
+	float: right;
+}
+#previousStep,#nextStep{
+	cursor: pointer;
+	color:#f90;
+	font-weight: 900;
+}
+.closeMask{
+	width: 50px;
+	height: 50px;
+	background: url(../img/closeMask.png);
+	float: right;
+	position: relative;
+	z-index:100000;
+	margin-top: -8px;
+	margin-right:10px;
+	display: none;
+	cursor: pointer;
+}
