@@ -5,10 +5,10 @@ A JavaScript language page guide, mainly is to generate a tip object, the object
 
 主要文件是intro.js文件，该文件代码主要实现页面导航的功能。因为该代码是直接从项目中截取出来的，并且导航过程中包含ajax等动态代码，目前还不能够静态运行，请见谅。
 
-###代码编写主要思想，主要是intro.js 文件，而initialize.js主要是一个分页把整个项目导航分为5大块的实现，使导航可以分段导航。
-
-通过构建对象和对象函数
+代码编写主要思想，主要是intro.js 文件，而initialize.js主要是一个分页把整个项目导航分为5大块的实现，使导航可以分段导航。
 -------
+###通过构建对象和对象函数
+
 function tipObj(left,top,pLeft,width,show,state,next,pre,nText,pText,text){
 	this.left = left;//框左边距
 	this.top = top;//框上边距
