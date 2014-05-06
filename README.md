@@ -8,7 +8,7 @@ A JavaScript language page guide, mainly is to generate a tip object, the object
 代码编写主要思想，主要是intro.js 文件，而initialize.js主要是一个分页把整个项目导航分为5大块的实现，使导航可以分段导航。
 -------
 ###通过构建对象和对象函数
-
+```js
 function tipObj(left,top,pLeft,width,show,state,next,pre,nText,pText,text){
 	this.left = left;//框左边距
 	this.top = top;//框上边距
@@ -89,3 +89,4 @@ function tip(funTip){
 
 var funTip = new tipObj("464","420","10","254px",1,1,0,0,"下一步","","启用帐套完成初始化，并且不能再次修改”。");
 tip(funTip);//通过这两句实现建立对象和对象赋值，实现一次提示框。
+```
